@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+</head>
+<body>
+  <h2>Covid-19 Detector</h2>
+  <div>
+    <form id="upload-file" action="/predict" method="POST" enctype="multipart/form-data">
+      <label for="imageupload" class="upload-label">Choose a file...</label>
+      <input type="file" name="file" id="imageupload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+      <div class="img-preview">
+        <div id="imagepreview"></div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary btn-lg" id="btn-predict">Predict!</button>
+      </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+    <h3 id="result">
+      <span></span>
+    </h3>
+  </div>
+
+  <script src="{{ url_for('static', filename='assets/script.js') }}"></script>
+</body>
+</html>
