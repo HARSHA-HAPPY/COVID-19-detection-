@@ -16,3 +16,5 @@ Essential Elements:-
 *Dataset: Attributes signify medical imaging or patient information.
 *Algorithms: Neural networks and various classifiers.
 *Assessment Measures: Precision, sensitivity, and specificity.
+
+Dataset taken from kaggle
